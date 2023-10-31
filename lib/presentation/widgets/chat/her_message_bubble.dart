@@ -19,8 +19,27 @@ class HerMessageBubble extends StatelessWidget {
               child: Text("Mensaje de Ludovico Einaudi",
                   style: TextStyle(color: colors.onPrimary)),
             )),
-        const SizedBox(height: 10)
+        const SizedBox(height: 10),
+        _ImageBubble(),
+        const SizedBox(height: 10),
       ],
+    );
+  }
+}
+
+class _ImageBubble extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.network(
+        "https://upload.wikimedia.org/wikipedia/commons/e/e5/Ludovico_Einaudi_in_Tehran_12_%28cropped%292.jpg",
+        width: size.width * 0.7,
+        height: 150,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
