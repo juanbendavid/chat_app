@@ -1,5 +1,6 @@
 import 'package:chat_app/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:chat_app/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:chat_app/presentation/widgets/shared/message_field_box.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -17,7 +18,7 @@ class ChatScreen extends StatelessWidget {
         ),
         title: const Text("Usuario"),
       ),
-      body: _ChatView(),
+      body: const _ChatView(),
     );
   }
 }
@@ -41,7 +42,7 @@ class _ChatView extends StatelessWidget {
                 },
               ),
             ),
-            Text("Ola")
+            MessageFieldBox(),
           ],
         ),
       ),
